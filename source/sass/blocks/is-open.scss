@@ -1,6 +1,6 @@
 .is-open + ul {
-    @include vp-767 {
-      display: flex;
-      flex-direction: column;
-    }
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
   }
+}
