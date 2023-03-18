@@ -19,7 +19,6 @@
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: minmax(300px, auto);
   gap: 30px;
 
   @include vp-767 {
@@ -44,7 +43,7 @@
   }
 
   svg {
-    fill: $color-default-blue;
+    color: $color-default-blue;
     display: block;
   }
 
@@ -76,7 +75,7 @@
     color: $color-default-white;
 
     svg {
-      fill: $color-default-white;
+      color: $color-default-white;
     }
 
     p {

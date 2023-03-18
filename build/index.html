@@ -17,7 +17,7 @@
   <div class="wrapper">
     <header class="header">
       <nav class="header__navigation container">
-        <a class="header__logo">
+        <a class="header__logo" aria-current="page" href="index.html">
           <picture>
             <source media="(max-width: 767px)" srcset="img/svg/logo-mobile.svg">
             <img src="img/svg/logo.svg" width="215" height="55" alt="Логотип компании SmartDevice.">
@@ -49,12 +49,10 @@
         <div class="intro__inner container">
           <h1>Печатные платы</h1>
           <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <span>
-            <a href="#feedback">
-              <span class="intro__button btn">Получить бесплатную консультацию</span>
-              <span class="intro__button btn intro__button-mobile">Бесплатная консультация</span>
-            </a>
-          </span>
+          <a href="#feedback">
+            <span class="intro__button btn">Получить бесплатную консультацию</span>
+            <span class="intro__button btn intro__button-mobile">Бесплатная консультация</span>
+          </a>
         </div>
       </section>
       <section class="advantages container">
@@ -125,7 +123,7 @@
       </section>
       <section class="catalog">
         <div class="catalog__inner container">
-          <h2>Smart Device предлагает следующие товары и услуги</h2>
+          <h2 class="catalog">Smart Device предлагает следующие товары и услуги</h2>
           <div class="catalog__title-mobile">
             <h2>Товары и услуги Smart&nbsp;Device</h2>
           </div>
@@ -159,9 +157,9 @@
             <h2>Остались вопросы? Задайте&nbsp;их&nbsp;нам!</h2>
             <p>Мы проконсультируем Вас бесплатно</p>
             <label class="visually-hidden" for="name">Введите ваше имя</label>
-            <input type="text" name="name" id="name" placeholder="Имя" minlength="1" required>
+            <input type="text" name="name" id="name" placeholder="Имя" minlength="1" required pattern="^[A-Za-zА-Яа-яЁё,.'-\s]{1,}">
             <label class="visually-hidden" for="phone">Введите ваш номер телефона</label>
-            <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
+            <input type="tel" name="phone" id="phone" placeholder="Телефон" required title="Используйте формат: +7(777)777-77-77" data-mask="phone" pattern="[+]7[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}">
             <label class="visually-hidden" for="question">Задайте ваш вопрос</label>
             <textarea id="question" placeholder="Ваш вопрос"></textarea>
             <label>
@@ -177,7 +175,7 @@
     <footer class="footer">
       <div class="footer__wrapper container">
         <div class="footer__social social">
-          <a class="footer__logo">
+          <a class="footer__logo" aria-current="page" href="index.html">
             <img src="img/svg/logo.svg" width="215" height="55" alt="Логотип компании Smart Device">
           </a>
           <ul class="social__list">

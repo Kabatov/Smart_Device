@@ -40,7 +40,7 @@
   }
 }
 
-.accordion button.is-open {
+.accordion__item .is-open {
   @include vp-767 {
     cursor: pointer;
 
