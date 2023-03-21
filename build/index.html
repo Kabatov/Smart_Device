@@ -49,9 +49,9 @@
         <div class="intro__inner container">
           <h1>Печатные платы</h1>
           <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <a href="#feedback">
-            <span class="intro__button btn">Получить бесплатную консультацию</span>
-            <span class="intro__button btn intro__button-mobile">Бесплатная консультация</span>
+          <a class="intro__button btn" href="#feedback">
+            <span>Получить бесплатную консультацию</span>
+            <span>Бесплатная консультация</span>
           </a>
         </div>
       </section>
@@ -123,10 +123,10 @@
       </section>
       <section class="catalog">
         <div class="catalog__inner container">
-          <h2 class="catalog">Smart Device предлагает следующие товары и услуги</h2>
-          <div class="catalog__title-mobile">
-            <h2>Товары и услуги Smart&nbsp;Device</h2>
-          </div>
+          <h2 class="catalog__title">
+            <span>Device предлагает следующие товары и услуги</span>
+            <span>Товары и услуги Smart&nbsp;Device</span>
+          </h2>
           <ul class="catalog__list">
             <li class="catalog__item">
               <a class="catalog__link catalog__link--production" href="#">
@@ -150,25 +150,31 @@
         <div class="feedback__inner container">
           <picture>
             <source type="image/webp" srcset="img/airplane@1x.webp 1x, img/airplane@2x.webp 2x">
-            <img width="510" height="285" src="img/airplane@1x.png" srcset="img/airplane@2x.png 2x"
-              alt="Бумажный самолетик." loading="lazy">
+            <img width="510" height="285" src="img/airplane@1x.png" srcset="img/airplane@2x.png 2x" alt="Бумажный самолетик." loading="lazy">
           </picture>
-          <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="feedback__form form">
             <h2>Остались вопросы? Задайте&nbsp;их&nbsp;нам!</h2>
             <p>Мы проконсультируем Вас бесплатно</p>
-            <label class="visually-hidden" for="name">Введите ваше имя</label>
-            <input type="text" name="name" id="name" placeholder="Имя" minlength="1" required pattern="^[A-Za-zА-Яа-яЁё,.'-\s]{1,}">
-            <label class="visually-hidden" for="phone">Введите ваш номер телефона</label>
-            <input type="tel" name="phone" id="phone" placeholder="Телефон" required title="Используйте формат: +7(777)777-77-77" data-mask="phone" pattern="[+]7[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}">
-            <label class="visually-hidden" for="question">Задайте ваш вопрос</label>
-            <textarea id="question" placeholder="Ваш вопрос"></textarea>
-            <label>
-              <input class="visually-hidden" type="checkbox" checked required>
-              <span class="feedback__checkbox-mark"></span>
-              <span>Я согласен на обработку персональных данных</span>
-            </label>
-            <button type="submit">Задать вопрос</button>
-          </form>
+            <form action="https://echo.htmlacademy.ru/" method="post">
+              <div class="form__group form__group--name">
+                <label class="visually-hidden" for="name">Введите ваше имя</label>
+                <input type="text" name="name" id="name" placeholder="Имя" minlength="1" required>
+              </div>
+              <div class="form__group form__group--phone">
+                <label class="visually-hidden" for="phone">Введите ваш номер телефона</label>
+                <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
+              </div>
+              <div class="form__group form__group--textarea">
+                <label class="visually-hidden" for="question">Задайте ваш вопрос</label>
+                <textarea id="question" placeholder="Ваш вопрос"></textarea>
+              </div>
+              <div class="form__group form__group--checkbox">
+                <input type="checkbox" name="check" id="checkbox" checked required>
+                <label for="checkbox">Я согласен на обработку персональных данных</label>
+              </div>
+              <button class="btn form__submit" type="submit">Задать вопрос</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
@@ -265,25 +271,29 @@
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
       <div class="modal__content">
-        <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+        <div class="modal__form form">
           <h2>Закажите звонок</h2>
-          <p>Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
-          <label class="visually-hidden" for="modal-name">Введите ваше имя</label>
-          <input type="text" name="name" id="modal-name" placeholder="Имя" minlength="1" required
-            pattern="^[A-Za-zА-Яа-яЁё,.'-\s]{1,}">
-          <label class="visually-hidden" for="modal-phone">Введите ваш номер телефона</label>
-          <input type="tel" name="phone" id="modal-phone" placeholder="Телефон" required
-            title="Используйте формат: +7(777)777-77-77" data-mask="phone"
-            pattern="[+]7[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}">
-          <label class="visually-hidden" for="modal-your-question">Задайте ваш вопрос</label>
-          <textarea id="modal-your-question" placeholder="Ваш вопрос"></textarea>
-          <label>
-            <input class="visually-hidden" type="checkbox" checked required>
-            <span class="modal__checkbox-mark"></span>
-            <span>Я согласен на обработку персональных данных</span>
-          </label>
-          <button type="submit">Отправить</button>
-        </form>
+          <p>Оставьте контакты, мы&nbsp;проконсультируем вас&nbsp;бесплатно в&nbsp;удобное время</p>
+          <form action="https://echo.htmlacademy.ru/" method="post">
+            <div class="form__group form__group--name">
+              <label class="visually-hidden" for="modal-name">Введите ваше имя</label>
+              <input type="text" name="name" id="modal-name" placeholder="Имя" minlength="1" required>
+            </div>
+            <div class="form__group form__group--phone">
+              <label class="visually-hidden" for="modal-phone">Введите ваш номер телефона</label>
+              <input type="tel" name="phone" id="modal-phone" placeholder="Телефон" required>
+            </div>
+            <div class="form__group form__group--textarea">
+              <label class="visually-hidden" for="modal-question">Задайте ваш вопрос</label>
+              <textarea id="modal-question" placeholder="Ваш вопрос"></textarea>
+            </div>
+            <div class="form__group form__group--checkbox">
+              <input type="checkbox" name="check" id="modal-checkbox" checked required>
+              <label for="modal-checkbox">Я согласен на обработку персональных данных</label>
+            </div>
+            <button class="btn form__submit" type="submit">Отправить</button>
+          </form>
+        </div>
         <button class="modal__close-button btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
         </button>
       </div>

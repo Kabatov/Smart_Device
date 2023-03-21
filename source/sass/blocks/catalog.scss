@@ -1,7 +1,7 @@
 .catalog {
   background-color: $color-default-black;
   padding-top: 66px;
-  padding-bottom: 140px;
+  padding-bottom: 145px;
 
   @include vp-1023 {
     padding-top: 55px;
@@ -14,7 +14,7 @@
   }
 }
 
-.catalog h2 {
+.catalog__title {
   font-family: $ff-roboto;
   font-weight: 400;
   font-size: 36px;
@@ -28,18 +28,23 @@
   }
 
   @include vp-767 {
-    display: none;
-  }
-}
-
-.catalog__title-mobile h2 {
-  display: none;
-
-  @include vp-767 {
-    display: block;
+    margin-bottom: 28px;
     font-size: 28px;
     line-height: 40px;
-    margin-bottom: 28px;
+  }
+
+  & span:first-child {
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  & span:last-child {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+    }
   }
 }
 

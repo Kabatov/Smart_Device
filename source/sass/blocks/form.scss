@@ -1,0 +1,118 @@
+.form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form__group input,
+.form__group textarea {
+  width: 100%;
+  padding: 14px 15px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: $ff-ptmono;
+  color: $color-white;
+  background-color: rgba(4, 20, 39, 0.15);
+  border: none;
+  border-radius: 3px;
+
+  &::placeholder {
+    color: $color-white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: rgba(4, 20, 39, 0.4);
+    outline: none;
+  }
+
+  &:active {
+    background-color: rgba(4, 20, 39, 0.8);
+  }
+
+  &:disabled {
+    background-color: #a0a0a0;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+.form__group textarea {
+  height: 155px;
+  padding: 24px 15px;
+  resize: none;
+
+  @include vp-1023 {
+    padding: 30px 15px;
+  }
+  @include vp-767 {
+    height: 180px;
+    padding: 23px 15px;
+  }
+}
+
+.form__group--checkbox {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  order: 1;
+  padding-left: 9px;
+}
+
+.form__group input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  appearance: none;
+
+  &:hover,
+  &:focus {
+    border-color: rgba(4, 20, 39, 0.4);
+    outline: none;
+  }
+
+  &:active {
+    border-color: rgba(4, 20, 39, 0.8);
+  }
+
+  &:disabled {
+    background-color: #a0a0a0;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+.form__group input[type="checkbox"]:checked {
+  background-image: url("../img/svg/icon-check.svg");
+}
+
+.form__group--checkbox label {
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $ff-ptmono;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.form__submit {
+  padding: 13px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  background-color: $color-default-black;
+
+  @include vp-1023 {
+    padding: 16px 16px 10px;
+  }
+}
