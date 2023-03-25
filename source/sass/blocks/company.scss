@@ -5,12 +5,12 @@
 
   @include vp-1023 {
     padding-top: 35px;
-    padding-bottom: 70px;
+    padding-bottom: 80px;
   }
 
   @include vp-767 {
-    padding-top: 22px;
-    padding-bottom: 70px;
+    padding-top: 49px;
+    padding-bottom: 80px;
   }
 }
 
@@ -36,34 +36,6 @@
   @include vp-767 {
     margin: 0;
   }
-}
-
-.company__description {
-  height: 170px;
-  overflow: hidden;
-  margin-bottom: 12px;
-
-  &-opened {
-    height: auto;
-  }
-
-  @include vp-1023 {
-    height: 260px;
-    margin-bottom: 8px;
-
-    &-opened {
-      height: auto;
-    }
-  }
-
-  @include vp-767 {
-    height: 205px;
-    margin-bottom: 8px;
-
-    &-opened {
-      height: auto;
-    }
-  }
 
   h3 {
     font-family: $ff-roboto;
@@ -81,6 +53,34 @@
       font-size: 28px;
       line-height: 39px;
       margin-bottom: 11px;
+    }
+  }
+}
+
+.company__description {
+  height: 170px;
+  overflow: hidden;
+  margin-bottom: 25px;
+
+  &-opened {
+    height: auto;
+  }
+
+  @include vp-1023 {
+    height: 260px;
+    margin-bottom: 17px;
+
+    &-opened {
+      height: auto;
+    }
+  }
+
+  @include vp-767 {
+    height: 205px;
+    margin-bottom: 15px;
+
+    &-opened {
+      height: auto;
     }
   }
 

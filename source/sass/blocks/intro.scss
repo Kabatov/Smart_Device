@@ -82,36 +82,38 @@
     font-family: $ff-ptmono;
     font-size: 22px;
     margin-top: 0;
-    margin-bottom: 33px;
+    margin-bottom: 41px;
     line-height: 36px;
     max-width: 670px;
 
     @include vp-1023 {
       line-height: 34px;
-      margin-bottom: 48px;
+      margin-bottom: 57px;
     }
 
     @include vp-767 {
       font-size: 14px;
       line-height: 22px;
-      margin-bottom: 34px;
+      margin-bottom: 44px;
     }
   }
 }
 
 .intro__button {
+  height: 55px;
+  width: 410px;
   font-size: 18px;
   line-height: 21px;
   padding: 16px 25px 17px;
   background-color: $color-default-blue;
 
   @include vp-1023 {
-    margin-left: 48px;
+    margin-left: 46px;
   }
 
   @include vp-767 {
-    /* display: inline-flex; */
     justify-content: center;
+    height: 40px;
     width: 100%;
     padding: 10px 30px;
     font-size: 14px;
