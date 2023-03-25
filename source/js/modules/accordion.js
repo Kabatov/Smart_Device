@@ -9,13 +9,15 @@ const initAccordion = () => {
   if (accordionTitles.length > 0) {
     accordionTitles.forEach((accordeonTitle) => {
       accordeonTitle.addEventListener('click', (evt) => {
-        if (evt.target.classList.contains('is-open')) {
-          evt.target.classList.remove('is-open');
+        const parent = evt.target.closest('.accordion__item');
+        if (parent.classList.contains('is-open')) {
+          parent.classList.remove('is-open');
         } else {
-          for (let title of accordionTitles) {
-            title.classList.remove('is-open');
+          const blocks = document.querySelectorAll('.accordion__item.is-open');
+          for (let block of blocks) {
+            block.classList.remove('is-open');
           }
-          evt.target.classList.add('is-open');
+          parent.classList.add('is-open');
         }
       });
     });

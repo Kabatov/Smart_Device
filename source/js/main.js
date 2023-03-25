@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initAccordion} from './modules/accordion';
 import {maskPhone} from './modules/mask-button';
+import {breakpointCheckerDesktop} from './modules/adaptive';
 
 // ---------------------------------
 
@@ -33,6 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
 
+  breakpointCheckerDesktop();
   iosVhFix();
 
   // Modules
