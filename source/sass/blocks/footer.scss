@@ -84,12 +84,6 @@
   }
 }
 
-.footer__nav .is-open {
-  @include vp-767 {
-    margin-bottom: 16px;
-  }
-}
-
 .footer__nav-list {
   display: grid;
   grid-template-columns: minmax(160px, 220px) minmax(160px, 220px);

@@ -80,6 +80,7 @@
   border: 1px solid #ffffff;
   border-radius: 2px;
   appearance: none;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -103,10 +104,19 @@
 }
 
 .form__group--checkbox label {
+  margin-top: 7px;
   font-size: 14px;
   line-height: 16px;
   font-family: $ff-ptmono;
   color: rgba(255, 255, 255, 0.8);
+
+  @include vp-1023 {
+    margin-top: 0;
+  }
+
+  @include vp-767 {
+    margin-top: 7px;
+  }
 }
 
 .form__submit {

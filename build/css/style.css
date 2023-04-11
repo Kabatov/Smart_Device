@@ -711,9 +711,9 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
 }
 
 .header__contacts {
@@ -723,11 +723,13 @@ button,
   grid-template-columns: 1fr 1fr;
   min-width: 43%;
   max-width: 35%;
-  margin-bottom: 5px;
+  margin-top: 12px;
 }
 
 .header__contacts svg {
   margin-right: 15px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .header__link {
@@ -739,6 +741,9 @@ button,
   align-items: center;
   margin-left: 16px;
   color: #f2f5f6;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .header__button {
@@ -750,8 +755,10 @@ button,
   border: 1px solid #f2f5f6;
   cursor: pointer;
   padding: 10px 15px;
-  width: 160px;
+  max-width: 160px;
   text-align: center;
+  margin-right: 4px;
+  margin-top: 6px;
 }
 
 .header__button:hover,
@@ -778,9 +785,6 @@ button,
   height: 100%;
   top: 0;
   left: 0;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0)));
-  background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
-  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
 }
 
 .intro__inner {
@@ -788,6 +792,7 @@ button,
   z-index: 1;
   padding-top: 305px;
   padding-left: 125px;
+  padding-bottom: 280px;
 }
 
 .intro__inner h1 {
@@ -810,12 +815,13 @@ button,
 }
 
 .intro__button {
-  height: 55px;
+  min-height: 55px;
   width: 410px;
   font-size: 18px;
   line-height: 21px;
   padding: 16px 25px 17px;
   background-color: #00b2ff;
+  overflow: hidden;
 }
 
 .intro__button span:last-child {
@@ -951,11 +957,11 @@ button,
   color: #00b2ff;
   font-size: 14px;
   line-height: 16px;
-  width: 180px;
+  min-width: 180px;
   border: 1px solid #00b2ff;
   background-color: transparent;
-  padding-top: 13px;
-  padding-bottom: 13px;
+  padding: 13px;
+  overflow: hidden;
 }
 
 .catalog {
@@ -1393,6 +1399,7 @@ button,
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  cursor: pointer;
 }
 
 .form__group input[type=checkbox]:hover,
@@ -1419,6 +1426,7 @@ button,
 }
 
 .form__group--checkbox label {
+  margin-top: 7px;
   font-size: 14px;
   line-height: 16px;
   font-family: "PT Mono", "Courier", monospace;
@@ -1509,7 +1517,7 @@ button,
   height: 20px;
   padding: 20px;
   background-color: transparent;
-  background-image: url("/img/svg/close-button.svg");
+  background-image: url("../img/svg/close-button.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: none;
@@ -1646,6 +1654,8 @@ button,
     -ms-flex-item-align: start;
     -ms-grid-row-align: start;
     align-self: start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 
   .header__contacts svg {
@@ -1679,6 +1689,7 @@ button,
   .intro__inner {
     padding-top: 180px;
     padding-left: 50px;
+    padding-bottom: 205px;
   }
 
   .intro__inner h1 {
@@ -1742,8 +1753,8 @@ button,
   }
 
   .company__description {
-    height: 260px;
-    margin-bottom: 17px;
+    height: 220px;
+    margin-bottom: 8px;
   }
 
   .company__description-opened {
@@ -1897,6 +1908,10 @@ button,
     padding: 30px 15px;
   }
 
+  .form__group--checkbox label {
+    margin-top: 0;
+  }
+
   .form__submit {
     padding: 16px 16px 10px;
   }
@@ -1954,6 +1969,7 @@ button,
   .intro__inner {
     padding-top: 150px;
     padding-left: 25px;
+    padding-bottom: 190px;
   }
 
   .intro__inner h1 {
@@ -2059,8 +2075,8 @@ button,
   }
 
   .company__description {
-    height: 205px;
-    margin-bottom: 15px;
+    height: 211px;
+    margin-bottom: 20px;
   }
 
   .company__description-opened {
@@ -2070,6 +2086,7 @@ button,
   .company__description p {
     font-size: 14px;
     line-height: 19px;
+    height: 120px;
   }
 
   .company__button {
@@ -2185,10 +2202,6 @@ button,
     width: 100%;
     margin-bottom: 0;
     text-align: left;
-  }
-
-  .footer__nav .is-open {
-    margin-bottom: 16px;
   }
 
   .footer__nav li,
@@ -2325,6 +2338,10 @@ button,
   .form__group textarea {
     height: 180px;
     padding: 23px 15px;
+  }
+
+  .form__group--checkbox label {
+    margin-top: 7px;
   }
 }
 

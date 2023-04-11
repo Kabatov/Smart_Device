@@ -67,8 +67,8 @@
   }
 
   @include vp-1023 {
-    height: 260px;
-    margin-bottom: 17px;
+    height: 220px;
+    margin-bottom: 8px;
 
     &-opened {
       height: auto;
@@ -76,8 +76,8 @@
   }
 
   @include vp-767 {
-    height: 205px;
-    margin-bottom: 15px;
+    height: 211px;
+    margin-bottom: 20px;
 
     &-opened {
       height: auto;
@@ -93,6 +93,8 @@
     @include vp-767 {
       font-size: 14px;
       line-height: 19px;
+      height: 120px;
+      
     }
   }
 }
@@ -101,11 +103,11 @@
   color: $color-default-blue;
   font-size: 14px;
   line-height: 16px;
-  width: 180px;
+  min-width: 180px;
   border: 1px solid $color-default-blue;
   background-color: transparent;
-  padding-top: 13px;
-  padding-bottom: 13px;
+  padding: 13px;
+  overflow: hidden;
 
   @include vp-767 {
     width: 160px;
