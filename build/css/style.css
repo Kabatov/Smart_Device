@@ -1257,6 +1257,26 @@ button,
   padding: 0;
 }
 
+.accordion__chapter {
+  position: relative;
+}
+
+.accordion__chapter-button {
+  display: none;
+}
+
+.accordion__chapter h2 {
+  color: #ffffff;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: transparent;
+}
+
 .contacts {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2284,6 +2304,18 @@ button,
 
   .accordion__item.is-open button::after {
     display: none;
+  }
+
+  .accordion__chapter-button {
+    display: block;
+    position: absolute;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
   .contacts {

@@ -75,3 +75,15 @@
     bottom: 0;
   }
 }
+
+.accordion__chapter h2 {
+  color: #ffffff;
+  font-family: $ff-roboto;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-white;
+  background-color: transparent;
+}
