@@ -2,7 +2,6 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initAccordion} from './modules/accordion';
-import {maskPhone} from './modules/mask-button';
 import {breakpointCheckerDesktop} from './modules/adaptive';
 
 // ---------------------------------
@@ -28,8 +27,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   initAccordion();
-
-  maskPhone();
 
   // Utils
   // ---------------------------------

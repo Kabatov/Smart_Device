@@ -1,8 +1,8 @@
 .form form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: 30px;
   grid-row-gap: 20px;
+  grid-column-gap: 30px;
   align-items: start;
 
   @include vp-767 {
@@ -18,11 +18,13 @@
 .form__group textarea {
   width: 100%;
   padding: 14px 15px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
   font-family: $ff-ptmono;
   color: $color-white;
+
   background-color: rgba(4, 20, 39, 0.15);
   border: none;
   border-radius: 3px;
@@ -43,6 +45,7 @@
 
   &:disabled {
     background-color: #a0a0a0;
+
     pointer-events: none;
     user-select: none;
   }
@@ -51,6 +54,7 @@
 .form__group textarea {
   height: 155px;
   padding: 24px 15px;
+
   resize: none;
 
   @include vp-1023 {
@@ -74,13 +78,15 @@
   width: 15px;
   height: 15px;
   padding: 0;
+
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
   border: 1px solid #ffffff;
   border-radius: 2px;
-  appearance: none;
   cursor: pointer;
+
+  appearance: none;
 
   &:hover,
   &:focus {
@@ -94,6 +100,7 @@
 
   &:disabled {
     background-color: #a0a0a0;
+
     pointer-events: none;
     user-select: none;
   }
@@ -105,6 +112,7 @@
 
 .form__group--checkbox label {
   margin-top: 7px;
+
   font-size: 14px;
   line-height: 16px;
   font-family: $ff-ptmono;
@@ -113,7 +121,6 @@
   @include vp-1023 {
     margin-top: 0;
   }
-
   @include vp-767 {
     margin-top: 7px;
   }
@@ -121,13 +128,19 @@
 
 .form__submit {
   padding: 13px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.05em;
+
   background-color: $color-default-black;
 
   @include vp-1023 {
     padding: 16px 16px 10px;
   }
+}
+
+.form__group.is-invalid input {
+  outline: 2px solid #ff0000;
 }
